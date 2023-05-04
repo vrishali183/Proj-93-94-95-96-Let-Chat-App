@@ -6,8 +6,8 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   user_name = localStorage.getItem("user_name");
-
-document.getElementById("user_name").innerHTML = "Welcome " + user_name + "!";
+//add user_name
+document.getElementById("").innerHTML = "Welcome " + user_name + "!";
 
 function addRoom()
 {
@@ -18,8 +18,8 @@ function addRoom()
   });
 
     localStorage.setItem("room_name", room_name);
-    
-    window.location = "Chat_Page.html";
+    //Chat_Page.html
+    window.location = "";
 }
 
 function getData() {  firebase.database().ref("/").on('value', function(snapshot) {
@@ -29,7 +29,9 @@ function getData() {  firebase.database().ref("/").on('value', function(snapshot
        Room_names = childKey;
        console.log("Room Name - " + Room_names);
       row = "<div class='room_name' id="+Room_names+" onclick='redirectToRoomName(this.id)' >#"+ Room_names +"</div><hr>";
-      document.getElementById("output").innerHTML += row;
+      
+      //output
+      document.getElementById("").innerHTML += row;
     });
   });
 
